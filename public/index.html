@@ -11,16 +11,42 @@
     <div id='root'>
         <div class='row'>
             <div class='col-lg-6'>
-                <textarea class="form-control" id='json' style="min-height:300px" placeholder="请在这里输入json"></textarea>
+                <textarea class="form-control" id='json' style="min-height:300px" placeholder="请在这里输入json">
+{
+    "numbers": [1,2,3 ],
+    "anObject": { "a": "b","e": "d","c": "f\""},
+    "name":"zhangsan",
+    "cardList":[
+        {
+            "bankName":"中国银行",
+            "cardNum":"1234"
+        },
+    {
+            "bankName":"华夏银行",
+            "cardNum":"4567"
+        }
+        
+    ] 
+}
+                </textarea>
             </div>
             <div class='col-lg-6'>
-                <textarea class="form-control" id="path" style="min-height:300px" placeholder="请在这里输入文档中的json路径"></textarea>
+                <textarea class="form-control" id="path" style="min-height:300px" placeholder="请在这里输入文档中的json路径">
+numbers 	 
+anObject	 
+anObject.a	 	 
+anObject.e	 	 
+anObject.c
+name
+sex
+cardList
+cardList[].bankName</textarea>
             </div>
            
         </div>
         <div class='row'>
                 <div class='col-lg-12'>
-                    <button type="button" id=“compareBtn” class="btn btn-primary btn-s-md">差异比较</button>
+                    <button type="button" id="compareBtn" class="btn btn-primary btn-s-md">差异比较</button>
                 </div>
         </div>
         <div class='row'>

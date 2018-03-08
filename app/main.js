@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 var $=require('jquery')
-$("#“compareBtn”").click(function(){
+$("#compareBtn").click(function(){
     var json=JSON.parse($("#json").val());
     var path=$("#path").val();
     var paths=path.split("\n");
@@ -66,6 +66,7 @@ $("#“compareBtn”").click(function(){
 
 
 });
+$("#compareBtn").click();
 
 
 function extractPath(parentPath, pathSet, jsonObj) {
