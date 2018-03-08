@@ -50,13 +50,13 @@ $("#“compareBtn”").click(function(){
 
    
     for(var i=0;i<l.length;i++){
-        html+="<tr><td>"+l[i]+"</td><td>&nbsp;</td>&nbsp;<td>&nbsp;</td></tr>"
+        html+="<tr><td><span style='color:red'>"+l[i]+"</span></td><td>&nbsp;</td>&nbsp;<td>&nbsp;</td></tr>"
     }
     for(var i=0;i<r.length;i++){
-        html+="<tr><td>&nbsp;</td><td>&nbsp;</td>&nbsp;<td>"+r[i]+"</td></tr>"
+        html+="<tr><td>&nbsp;</td><td>&nbsp;</td>&nbsp;<td><span style='color:red'>"+r[i]+"</span></td></tr>"
     }
     for(var i=0;i<e.length;i++){
-        html+="<tr><td>&nbsp;</td><td>"+e[i]+"</td>&nbsp;<td>&nbsp;</td></tr>"
+        html+="<tr><td>&nbsp;</td><td><span style='color:green'>"+e[i]+"</span></td>&nbsp;<td>&nbsp;</td></tr>"
     }
     $("#result").html(html);
     console.log(e);
