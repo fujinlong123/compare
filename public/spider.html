@@ -3,106 +3,326 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="检查判断JSON是否存在某些字段">
-    <meta name="description" content="检查判断JSON是否存在某些字段">
-    <title>比较文档字段JSON数据差异</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="keywords" content="检查判断JSON是否存在某些字段">
+  <meta name="description" content="检查判断JSON是否存在某些字段">
+  <title>比较文档字段JSON数据差异</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="js/jquerytree/css/style.css" />
 </head>
 
 <body>
-    <div id='root'>
-       
-    <div  contenteditable="true">
+  <div class="tree well">
+
+    <ul>
+
+      <li>
+
+        <span>
+          <i class="icon-folder-open"></i> Parent</span>
+        <a href="">Goes somewhere</a>
+
+        <ul>
+
+          <li>
+
+            <span>
+              <i class="icon-minus-sign"></i> Child</span>
+            <a href="">Goes somewhere</a>
+
+            <ul>
+
+              <li>
+
+                <span>
+                  <i class="icon-leaf"></i> Grand Child</span>
+                <a href="">Goes somewhere</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+
+            <span>
+              <i class="icon-minus-sign"></i> Child</span>
+            <a href="">Goes somewhere</a>
+
+            <ul>
+
+              <li>
+
+                <span>
+                  <i class="icon-leaf"></i> Grand Child</span>
+                <a href="">Goes somewhere</a>
+
+              </li>
+
+              <li>
+
+                <span>
+                  <i class="icon-minus-sign"></i> Grand Child</span>
+                <a href="">Goes somewhere</a>
+
+                <ul>
+
+                  <li>
+
+                    <span>
+                      <i class="icon-minus-sign"></i> Great Grand Child</span>
+                    <a href="">Goes somewhere</a>
+
+                    <ul>
+
+                      <li>
+                        <span>
+                          <i class="icon-leaf"></i> Great great Grand Child</span>
+                        <a href="">Goes somewhere</a>
+                      </li>
+
+                      <li>
+                        <span>
+                          <i class="icon-leaf"></i> Great great Grand Child</span>
+                        <a href="">编辑</a>
+                        <a href="">添加</a>
+                        <a href="">删除</a>
+
+                      </li>
+
+                    </ul>
+
+                  </li>
+
+                  <li>
+
+                    <span>
+                      <i class="icon-leaf"></i> Great Grand Child</span>
+                    <a href="">Goes somewhere</a>
+
+                  </li>
+
+                  <li>
+
+                    <span>
+                      <i class="icon-leaf"></i> Great Grand Child</span>
+                    <a href="">Goes somewhere</a>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li>
+
+                <span>
+                  <i class="icon-leaf"></i> Grand Child</span>
+                <a href="">Goes somewhere</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <li>
+
+        <span>
+          <i class="icon-folder-open"></i> Parent2</span>
+        <a href="">Goes somewhere</a>
+
+        <ul>
+
+          <li>
+
+            <span>
+              <i class="icon-leaf"></i> Child</span>
+            <a href="">Goes somewhere</a>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+    </ul>
+
+  </div>
 
 
-        <div class="daily">
-        
-          <h3 class="date">
-            <i class="fa fa-calendar"></i>
-            <span>星期四</span>
-            <small>2015-02-05</small>
-        
-            <a class="pull-right" href="https://toutiao.io/top/2015-02-05"><i class="fa fa-envelope-o"></i></a>
-          </h3>
-        
-          <div class="posts">
-        
-        
-            
-        <div class="post">
-          <div class="btn-group-vertical upvote">
-            <a class="btn btn-default like-button" title="登录后点赞" href="/signin"><i class="fa fa-thumbs-o-up"></i> <span>3</span></a>
-            <a class="btn btn-default btn-xs favorite-button" title="登录后收藏" href="/signin"><i class="fa fa-bookmark-o"></i> <span>16</span></a>
-          </div>
-        
-        
-          <div class="content" data-url="/posts/e2j5l">
-            <h3 class="title">
-              <a target="_blank" rel="external" title="tcpkali - 一个针对 TCP 和 WebSocket 服务器的高性能负载生成工具 - 开发者头条" href="/k/e2j5l">tcpkali - 一个针对 TCP 和 WebSocket 服务器的高性能负载生成工具</a>
-              
-            </h3>
-        
-            <div class="meta">
-              github.com&nbsp;
-        
-              <span>
-                  <i class="fa fa-comment-o"></i> 0
-              </span>
-        
-            </div>
-          </div>
-        
-          
-        <div class="user-info">
-          <div class="user-avatar">
-            <a title="头条精选 - 开发者头条" href="/subjects/4">
-              <img width="32" alt="头条精选 - 独家号" src="https://oe9nbfytu.qnssl.com/subject%2Fd2f421bbe0be47369b6560e316a5153b" />
-              
-        </a>  </div>
-        
-          <div class="info">
-            <h5>编辑</h5>
-        
-            <a href="/u/123460"><img width="48" alt="开发者头条 - 开发者头条" src="https://oe9nbfytu.qnssl.com/user/ae8b163c1bfb43f7b01c7b4941b077ec/thumb" /></a>
-        
-            <h4 class="m-b-xs">开发者头条</h4>
-        
-            <p class="bio">没错，我就是头条君。求关注～</p>
-        
-            <a class="btn btn-default btn-xs" href="/signin"><i class="fa fa-eye"></i> 关注TA</a>
-          </div>
-        </div>
-        
-        <div class="subject-name">
-          <a href="/subjects/4">头条精选</a></div>
-        
-        
-        </div>
-        
-        
-        
-        <a class="hide jscroll-next" href="/prev/2015-02-04">下一页</a>
-        
-    </div>        
+
+  <div class="tree">
+
+    <ul>
+
+      <li>
+
+        <span>
+          <i class="icon-calendar"></i> 2013, Week 2</span>
+
+        <ul>
+
+          <li>
+
+            <span class="badge badge-success">
+              <i class="icon-minus-sign"></i> Monday, January 7: 8.00 hours</span>
+
+            <ul>
+
+              <li>
+
+                <a href="">
+                  <span>
+                    <i class="icon-time"></i> 8.00</span> &ndash; Changed CSS to accomodate...</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+
+            <span class="badge badge-success">
+              <i class="icon-minus-sign"></i> Tuesday, January 8: 8.00 hours</span>
+
+            <ul>
+
+              <li>
+
+                <span>
+                  <i class="icon-time"></i> 6.00</span> &ndash;
+                <a href="">Altered code...</a>
+
+              </li>
+
+              <li>
+
+                <span>
+                  <i class="icon-time"></i> 2.00</span> &ndash;
+                <a href="">Simplified our approach to...</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+
+            <span class="badge badge-warning">
+              <i class="icon-minus-sign"></i> Wednesday, January 9: 6.00 hours</span>
+
+            <ul>
+
+              <li>
+
+                <a href="">
+                  <span>
+                    <i class="icon-time"></i> 3.00</span> &ndash; Fixed bug caused by...</a>
+
+              </li>
+
+              <li>
+
+                <a href="">
+                  <span>
+                    <i class="icon-time"></i> 3.00</span> &ndash; Comitting latest code to Git...</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+
+            <span class="badge badge-important">
+              <i class="icon-minus-sign"></i> Wednesday, January 9: 4.00 hours</span>
+
+            <ul>
+
+              <li>
+
+                <a href="">
+                  <span>
+                    <i class="icon-time"></i> 2.00</span> &ndash; Create component that...</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+      <li>
+
+        <span>
+          <i class="icon-calendar"></i> 2013, Week 3</span>
+
+        <ul>
+
+          <li>
+
+            <span class="badge badge-success">
+              <i class="icon-minus-sign"></i> Monday, January 14: 8.00 hours</span>
+
+            <ul>
+
+              <li>
+
+                <span>
+                  <i class="icon-time"></i> 7.75</span> &ndash;
+                <a href="">Writing documentation...</a>
+
+              </li>
+
+              <li>
+
+                <span>
+                  <i class="icon-time"></i> 0.25</span> &ndash;
+                <a href="">Reverting code back to...</a>
+
+              </li>
+
+            </ul>
+
+          </li>
+
+        </ul>
+
+      </li>
+
+    </ul>
+
+  </div>
 
 
-    </div>
-
-   
 
 </body>
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<script src="js/jquerytree/jqueryTree.js"></script>
+
 
 <script>
-    var html='<div class="subject-name">'+
-        '         '+
-        '<div>        </div>'+
-          '<a href="/subjects/4">头条精选</a></div>';
-   $("body").html(html);
-
+  
+  $(".tree").jqueryTree();
 </script>
+
 </html>
