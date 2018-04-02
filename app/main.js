@@ -70,26 +70,28 @@ $("#compareBtn").click(function(){
 $("#compareBtn").click();
 
 
-function extractPath(parentPath, pathSet, jsonObj) {
-    $.each(jsonObj, function(key, v) {
-        if (v instanceof Array) {
-            var path = (!parentPath ? "" : (parentPath + ".")) + key + "[]";
-            pathSet[path] = 'array';
-            for (var i = 0; i < v.length; i++) {
-                if(v[i] instanceof Object){
-                    extractPath(path, pathSet, v[i]);
-                }
-            }
-        } else if (v instanceof Object) {
-            var path = (!parentPath ? "" : (parentPath + ".")) + key;
-            pathSet[path] = 'object';
-            extractPath(path, pathSet, v);
-        } else {
-            var path = (!parentPath ? "" : (parentPath + ".")) + key;
-            pathSet[path] = (v != null ? typeof v : '');
-        }
+function extractPath(jsonObjectPath, pathSet, jsonObj) {
 
-    });
+    if (jsonObj instanceof Array) {
+        var path =jsonObjectPath+  "[]";
+        pathSet[path] = 'array';
+        for (var i = 0; i < jsonObj.length; i++) {
+            if(jsonObj[i] instanceof Object){
+                extractPath(path, pathSet, jsonObj[i]);
+            }
+        }
+    } else if (jsonObj instanceof Object) {
+        var path = jsonObjectPath;
+        pathSet[path] = 'object';
+        $.each(jsonObj, function(key, v) {
+            extractPath((!path ? "" : (path + "."))+key, pathSet, v);
+        });
+    } else {
+        var path =jsonObjectPath;
+        pathSet[path] = (jsonObj != null ? typeof jsonObj : '');
+    }
+
+  
 
 }
 
