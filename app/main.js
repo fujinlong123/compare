@@ -1,6 +1,11 @@
 
 $("#compareBtn").click(function(){
-    var json=JSON.parse($("#json").val());
+    var json;
+    try{
+     json=JSON.parse($("#json").val());
+    }catch(e){
+        alert("json格式不正确");
+    }
     var path=$("#path").val();
     var paths=path.split("\n");
     for(var i=0;i<paths.length;i++){
@@ -18,7 +23,7 @@ $("#compareBtn").click(function(){
         paths2.push(key);
     }
     
-    console.log(paths2);
+
 
     var e=[];
     var l=[];
@@ -57,9 +62,7 @@ $("#compareBtn").click(function(){
         html+="<tr><td>&nbsp;</td><td><span style='color:green'>"+e[i]+"</span></td>&nbsp;<td>&nbsp;</td></tr>"
     }
     $("#result").html(html);
-    console.log(e);
-    console.log(l);
-    console.log(r);
+   
 
 
 
